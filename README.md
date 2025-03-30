@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Registros
+# Sistema de Gerenciamento de Dados: CRUD com Sequence Set
 
 ## Descrição
 O projeto teve como objetivo fazer um Sequence Set, estrutura de dados projetada para armazenar e gerenciar informações de maneira organizada e eficiente em arquivos, geralmente utilizados para acesso direto a grandes volumes de dados.
