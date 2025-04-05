@@ -77,7 +77,6 @@ Ao executar o programa, será exibido um menu interativo com as seguintes opçõ
 ## 📂 Estrutura de Diretórios
 
 bash
-.
 ├── ProjetoPráatico.cpp   # Código-fonte principal
 ├── dados.csv                 # Arquivo CSV de exemplo com registros
 └── README.md                 # Documentação do projeto
