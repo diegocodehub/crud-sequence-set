@@ -134,27 +134,12 @@ O projeto utiliza diversos conceitos importantes de estruturas de dados e organi
 
 ---
 
-## 🔧 Possíveis Melhorias Futuras
-
-- 🧠 **Rebalanceamento de Blocos** após exclusões frequentes.
-- 📝 **Edição de Registros**, permitindo modificar dados sem removê-los.
-- 📈 **Estatísticas em tempo real** (número total de registros, média por bloco, etc.).
-- 💽 **Persistência Avançada** com salvamento incremental.
-- 🌐 **Interface gráfica com Qt ou Web** para tornar o sistema mais acessível.
-- ✅ **Sistema de testes automatizados** com entrada/saída simulada.
-- 🔐 **Controle de acesso** e autenticação de usuário para segurança em sistemas reais.
-
----
-
----
-
 ## 👥 Autores
 
 Projeto desenvolvido por:
 
 - **Diego Oliveira** — [@diegocodehub](https://github.com/diegocodehub)  
-- **Arthur Soares Marques**  
-- **Luiz Felipe Marquez**  
+- **Gustavo Martins**
 
 🎓 Curso de Ciência da Computação — Universidade Federal de Lavras (UFLA)
 
