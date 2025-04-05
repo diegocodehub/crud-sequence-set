@@ -1,3 +1,4 @@
+
 # 🔄 Sistema de Gerenciamento de Dados — CRUD com Sequence Set
 
 ## 📌 Descrição
@@ -36,17 +37,17 @@ Este projeto implementa um **Sequence Set**, uma estrutura de dados projetada pa
 
 Compile o programa utilizando o comando abaixo:
 
-bash
+```bash
 g++ -o ProjetoPrático ProjetoPrático.cpp
-
+```
 
 ### 3️⃣ Execução
 
 Após a compilação, execute o programa no terminal com o comando:
 
-bash
+```bash
 ./ProjetoPrático
-
+```
 
 ---
 
@@ -54,61 +55,111 @@ bash
 
 Ao executar o programa, será exibido um menu interativo com as seguintes opções:
 
-1. **Adicionar Registros**  
-   - Permite a inserção manual de novos funcionários ou a importação a partir de um novo arquivo CSV.
+```
+===== MENU =====
+1. Adicionar registros (manual ou CSV)
+2. Excluir registro
+3. Buscar registro
+4. Imprimir blocos
+5. Sair
+Escolha uma opção:
+```
 
-2. **Excluir Registros**  
-   - Remove um registro existente ao informar o ID correspondente.
+### Exemplo de navegação:
 
-3. **Buscar Registro**  
-   - Pesquisa um registro específico com base no ID e exibe os detalhes completos.
+#### ✅ Inserção manual:
+```
+Escolha uma opção: 1
+Deseja adicionar manualmente (1) ou importar de CSV (2)? 1
 
-4. **Imprimir Blocos**  
-   - Mostra todos os blocos da estrutura Sequence Set, incluindo:
-     - Registros armazenados em cada bloco
-     - Número de registros por bloco
-     - Conexões entre os blocos (próximo/anterior)
+Digite o ID: 105
+Digite o nome: João Mendes
+Digite o cargo: Desenvolvedor Full Stack
+```
 
-5. **Encerrar Programa**  
-   - Finaliza a execução do sistema de forma segura.
+#### ✅ Importação de CSV:
+```
+Escolha uma opção: 1
+Deseja adicionar manualmente (1) ou importar de CSV (2)? 2
+
+Digite o nome do arquivo CSV: dados.csv
+Importação concluída com sucesso!
+```
+
+#### ✅ Exclusão:
+```
+Escolha uma opção: 2
+Digite o ID do funcionário a ser removido: 102
+Registro removido com sucesso.
+```
+
+#### ✅ Busca:
+```
+Escolha uma opção: 3
+Digite o ID do funcionário: 103
+
+Registro encontrado:
+ID: 103
+Nome: Mariana Costa
+Cargo: Gerente de Projetos
+```
+
+#### ✅ Impressão dos blocos:
+```
+Escolha uma opção: 4
+
+Bloco 0:
+[101, Ana Silva, Engenheira de Software]
+[103, Mariana Costa, Gerente de Projetos]
+
+Bloco 1:
+[105, João Mendes, Desenvolvedor Full Stack]
+
+Total de blocos: 2
+```
+
+#### ✅ Saída:
+```
+Escolha uma opção: 5
+Encerrando o programa...
+```
 
 ---
 
 ## 📂 Estrutura de Diretórios
 
-```markdown
+```
 ├── ProjetoPrático.cpp        # Código-fonte principal  
 ├── dados.csv                 # Arquivo CSV de exemplo com registros  
 └── README.md                 # Documentação do projeto
 ```
 
-
 ---
 
 ## 🧪 Exemplo de Funcionamento
 
-### 📄 Exemplo de arquivo dados.csv
+### 📄 Conteúdo do arquivo `dados.csv`:
 
-csv
+```csv
 101,Ana Silva,Engenheira de Software
 102,Carlos Oliveira,Analista de Sistemas
 103,Mariana Costa,Gerente de Projetos
+```
 
+### 🔍 Busca por ID:
 
-### 🔍 Exemplo de busca por ID no terminal
-
-plaintext
+```
 Digite o ID do funcionário: 102
 
 Registro encontrado:
 ID: 102
 Nome: Carlos Oliveira
 Cargo: Analista de Sistemas
+```
 
+### 🖨️ Impressão dos blocos após importação:
 
-### 🖨️ Exemplo de impressão de blocos
-
-plaintext
+```
 Bloco 0:
   [101, Ana Silva, Engenheira de Software]
   [102, Carlos Oliveira, Analista de Sistemas]
@@ -117,20 +168,31 @@ Bloco 1:
   [103, Mariana Costa, Gerente de Projetos]
 
 Total de blocos: 2
+```
 
+### ❌ Exclusão de Registro:
+
+```
+Digite o ID do funcionário a ser removido: 101
+Registro removido com sucesso.
+
+Bloco 0:
+  [102, Carlos Oliveira, Analista de Sistemas]
+
+Bloco 1:
+  [103, Mariana Costa, Gerente de Projetos]
+```
 
 ---
 
 ## 🧠 Conceitos Fundamentais
 
-O projeto utiliza diversos conceitos importantes de estruturas de dados e organização de arquivos:
-
-- **Sequence Set**: Técnica eficiente de indexação baseada em blocos ordenados e encadeados, ideal para armazenar registros com chave de busca (ID).
-- **Encadeamento de Blocos**: Cada bloco mantém ponteiros para o bloco anterior e para o próximo, facilitando a navegação sequencial.
-- **Ordenação por ID**: Os registros são mantidos em ordem crescente de ID dentro de cada bloco, o que acelera as operações de busca e inserção.
-- **Divisão de Blocos (Split)**: Quando um bloco atinge sua capacidade máxima, ele é dividido em dois para preservar o balanceamento da estrutura.
-- **Remoção Lógica**: A exclusão de registros pode manter o espaço no bloco até que reorganizações futuras sejam feitas.
-- **Importação de Arquivos CSV**: Permite carregar dados externos de forma rápida, ideal para testes com grandes volumes.
+- **Sequence Set**: Técnica eficiente de indexação baseada em blocos ordenados e encadeados.
+- **Encadeamento de Blocos**: Cada bloco mantém ponteiros para o bloco anterior e o próximo.
+- **Ordenação por ID**: Registros mantidos em ordem crescente de ID.
+- **Split de Bloco**: Quando o bloco fica cheio, ele é dividido.
+- **Remoção Lógica**: O espaço pode ser mantido e reuso pode ser feito posteriormente.
+- **Importação de CSV**: Agiliza testes com grandes volumes de dados.
 
 ---
 
