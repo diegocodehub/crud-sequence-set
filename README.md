@@ -146,11 +146,17 @@ O projeto utiliza diversos conceitos importantes de estruturas de dados e organi
 
 ---
 
-## 👨‍💻 Autor
+---
 
-Desenvolvido por **Diego Oliveira, Arthur Soares Marques e Luiz Felipe Marquez** — Curso de Ciência da Computação  
-🎓 Universidade Federal de Lavras (UFLA)  
-🔗 GitHub: [diegocodehub](https://github.com/diegocodehub)
+## 👥 Autores
+
+Projeto desenvolvido por:
+
+- **Diego Oliveira** — [@diegocodehub](https://github.com/diegocodehub)  
+- **Arthur Soares Marques**  
+- **Luiz Felipe Marquez**  
+
+🎓 Curso de Ciência da Computação — Universidade Federal de Lavras (UFLA)
 
 ---
 
