@@ -37,7 +37,7 @@ Este projeto implementa um **Sequence Set**, uma estrutura de dados projetada pa
 Compile o programa utilizando o comando abaixo:
 
 bash
-g++ -o gerenciar_registros gerenciar_registros.cpp
+g++ -o ProjetoPrático ProjetoPrático.cpp
 
 
 ### 3️⃣ Execução
@@ -45,7 +45,7 @@ g++ -o gerenciar_registros gerenciar_registros.cpp
 Após a compilação, execute o programa no terminal com o comando:
 
 bash
-./gerenciar_registros
+./ProjetoPrático.cpp
 
 
 ---
@@ -78,7 +78,7 @@ Ao executar o programa, será exibido um menu interativo com as seguintes opçõ
 
 bash
 .
-├── gerenciar_registros.cpp   # Código-fonte principal
+├── ProjetoPráatico.cpp   # Código-fonte principal
 ├── dados.csv                 # Arquivo CSV de exemplo com registros
 └── README.md                 # Documentação do projeto
 
