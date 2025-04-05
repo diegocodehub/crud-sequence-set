@@ -1,4 +1,3 @@
-
 # 🔄 Sistema de Gerenciamento de Dados — CRUD com Sequence Set
 
 ## 📌 Descrição
