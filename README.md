@@ -45,7 +45,7 @@ g++ -o ProjetoPrático ProjetoPrático.cpp
 Após a compilação, execute o programa no terminal com o comando:
 
 bash
-./ProjetoPrático.cpp
+./ProjetoPrático
 
 
 ---
