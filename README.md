@@ -1,60 +1,171 @@
-# Sistema de Gerenciamento de Dados: CRUD com Sequence Set
+# 🔄 Sistema de Gerenciamento de Dados — CRUD com Sequence Set
 
-## Descrição
-O projeto teve como objetivo fazer um Sequence Set, estrutura de dados projetada para armazenar e gerenciar informações de maneira organizada e eficiente em arquivos, geralmente utilizados para acesso direto a grandes volumes de dados.
+## 📌 Descrição
 
-## Recursos
-1. **Carregar Dados**  
-   Importe registros de funcionários a partir de um arquivo CSV.
+Este projeto implementa um **Sequence Set**, uma estrutura de dados projetada para armazenar e gerenciar grandes volumes de informações de forma organizada e eficiente em arquivos. Essa estrutura é especialmente útil em sistemas que exigem acesso direto e rápido aos dados.
 
-2. **Adicionar Registros**  
-   Insira novos dados manualmente ou importe arquivos CSV adicionais.
+---
 
-3. **Excluir Registros**  
-   Remova informações de funcionários fornecendo o ID correspondente.
+## 🚀 Funcionalidades
 
-4. **Localizar Registros**  
-   Pesquise dados específicos pelo ID e exiba os detalhes armazenados.
+1. **📥 Carregar Dados**  
+   Importe registros de funcionários a partir de arquivos CSV.
 
-5. **Exibir Todos os Dados**  
-   Visualize os blocos com os registros, incluindo informações como o número de registros por bloco e suas conexões.
+2. **➕ Adicionar Registros**  
+   Insira novos registros manualmente ou importe novos dados de outros arquivos CSV.
 
-## Instruções de Uso
+3. **🗑️ Excluir Registros**  
+   Remova registros de funcionários fornecendo o ID correspondente.
 
-### Passo 1: Verifique se tem as ferramentas necessárias
-- Certifique-se de que possui um compilador C++ instalado (como o **g++**).
-- A base de dados (arquivo CSV) deve estar no mesmo diretório que o programa.
+4. **🔍 Localizar Registros**  
+   Pesquise registros pelo ID e visualize seus dados completos.
 
-### Passo 2: Compile o Programa
-- Gere o executável a partir do código-fonte utilizando o compilador C++:
-  ```bash
-  g++ -o gerenciar_registros gerenciar_registros.cpp
-  
-### Passo 3: Execute o Programa
+5. **📄 Exibir Todos os Dados**  
+   Visualize todos os blocos da estrutura, incluindo a quantidade de registros por bloco e suas conexões.
 
-Inicie o software pelo terminal ou linha de comando:
+---
 
-```bash
+## 🛠️ Instruções de Uso
+
+### 1️⃣ Pré-requisitos
+
+- Ter um compilador C++ instalado (como o **g++**).
+- Certificar-se de que os arquivos CSV estão no mesmo diretório do programa.
+
+### 2️⃣ Compilação
+
+Compile o programa utilizando o comando abaixo:
+
+bash
+g++ -o gerenciar_registros gerenciar_registros.cpp
+
+
+### 3️⃣ Execução
+
+Após a compilação, execute o programa no terminal com o comando:
+
+bash
 ./gerenciar_registros
-```
-### Passo 4: Interaja com o Menu
 
-O programa oferece um menu interativo com as seguintes opções:
 
-### Opções do Menu
+---
 
-1. **Adicionar**  
-   - Insira novos registros no sistema.  
-   - Escolha entre adicionar manualmente ou carregar dados de um arquivo CSV.
+## 🧭 Navegação pelo Menu
 
-2. **Excluir**  
-   - Remova registros existentes fornecendo o ID correspondente.
+Ao executar o programa, será exibido um menu interativo com as seguintes opções:
 
-3. **Buscar**  
-   - Encontre registros específicos por meio do ID e veja seus detalhes.
+1. **Adicionar Registros**  
+   - Permite a inserção manual de novos funcionários ou a importação a partir de um novo arquivo CSV.
 
-4. **Imprimir**  
-   - Liste todos os blocos e registros, exibindo informações como a quantidade de registros por bloco e as conexões entre eles.
+2. **Excluir Registros**  
+   - Remove um registro existente ao informar o ID correspondente.
 
-5. **Encerrar**  
-   - Finalize o programa.
+3. **Buscar Registro**  
+   - Pesquisa um registro específico com base no ID e exibe os detalhes completos.
+
+4. **Imprimir Blocos**  
+   - Mostra todos os blocos da estrutura Sequence Set, incluindo:
+     - Registros armazenados em cada bloco
+     - Número de registros por bloco
+     - Conexões entre os blocos (próximo/anterior)
+
+5. **Encerrar Programa**  
+   - Finaliza a execução do sistema de forma segura.
+
+---
+
+## 📂 Estrutura de Diretórios
+
+bash
+.
+├── gerenciar_registros.cpp   # Código-fonte principal
+├── dados.csv                 # Arquivo CSV de exemplo com registros
+└── README.md                 # Documentação do projeto
+
+
+---
+
+## 🧪 Exemplo de Funcionamento
+
+### 📄 Exemplo de arquivo dados.csv
+
+csv
+101,Ana Silva,Engenheira de Software
+102,Carlos Oliveira,Analista de Sistemas
+103,Mariana Costa,Gerente de Projetos
+
+
+### 🔍 Exemplo de busca por ID no terminal
+
+plaintext
+Digite o ID do funcionário: 102
+
+Registro encontrado:
+ID: 102
+Nome: Carlos Oliveira
+Cargo: Analista de Sistemas
+
+
+### 🖨️ Exemplo de impressão de blocos
+
+plaintext
+Bloco 0:
+  [101, Ana Silva, Engenheira de Software]
+  [102, Carlos Oliveira, Analista de Sistemas]
+
+Bloco 1:
+  [103, Mariana Costa, Gerente de Projetos]
+
+Total de blocos: 2
+
+
+---
+
+## 🧠 Conceitos Fundamentais
+
+O projeto utiliza diversos conceitos importantes de estruturas de dados e organização de arquivos:
+
+- **Sequence Set**: Técnica eficiente de indexação baseada em blocos ordenados e encadeados, ideal para armazenar registros com chave de busca (ID).
+- **Encadeamento de Blocos**: Cada bloco mantém ponteiros para o bloco anterior e para o próximo, facilitando a navegação sequencial.
+- **Ordenação por ID**: Os registros são mantidos em ordem crescente de ID dentro de cada bloco, o que acelera as operações de busca e inserção.
+- **Divisão de Blocos (Split)**: Quando um bloco atinge sua capacidade máxima, ele é dividido em dois para preservar o balanceamento da estrutura.
+- **Remoção Lógica**: A exclusão de registros pode manter o espaço no bloco até que reorganizações futuras sejam feitas.
+- **Importação de Arquivos CSV**: Permite carregar dados externos de forma rápida, ideal para testes com grandes volumes.
+
+---
+
+## 🔧 Possíveis Melhorias Futuras
+
+- 🧠 **Rebalanceamento de Blocos** após exclusões frequentes.
+- 📝 **Edição de Registros**, permitindo modificar dados sem removê-los.
+- 📈 **Estatísticas em tempo real** (número total de registros, média por bloco, etc.).
+- 💽 **Persistência Avançada** com salvamento incremental.
+- 🌐 **Interface gráfica com Qt ou Web** para tornar o sistema mais acessível.
+- ✅ **Sistema de testes automatizados** com entrada/saída simulada.
+- 🔐 **Controle de acesso** e autenticação de usuário para segurança em sistemas reais.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Diego Oliveira, Arthur Soares Marques e Luiz Felipe Marquez** — Curso de Ciência da Computação  
+🎓 Universidade Federal de Lavras (UFLA)  
+🔗 GitHub: [diegocodehub](https://github.com/diegocodehub)
+
+---
+
+## 📜 Licença
+
+Distribuído sob a licença [MIT](LICENSE).  
+Sinta-se à vontade para estudar, modificar, aprimorar e utilizar este projeto como desejar.
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas!  
+Abra uma *issue* com sugestões, relate problemas ou envie um *pull request* com melhorias.
+
+---
+
+> 💡 *"Soluções simples para problemas complexos começam com boas estruturas de dados."*
